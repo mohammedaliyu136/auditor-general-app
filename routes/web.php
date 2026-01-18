@@ -4,7 +4,7 @@ use App\Http\Controllers\Settings;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard');
 })->name('home');
 
 Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
